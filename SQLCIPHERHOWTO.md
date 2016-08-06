@@ -46,7 +46,7 @@ or follow step by step(each step correspond to a tag):
   ```
   For x64, replace 'OpenSSL-Win32' with 'OpenSSL-Win64'. Fow now, the compiler is able to find libraries.
   
-  * [tag sqlcipher-howto-6] Add some defines in 'target_name': 'sqlite3'  
+* [tag sqlcipher-howto-6] Add some defines in 'target_name': 'sqlite3'  
   
   before:
   ```
@@ -78,5 +78,5 @@ or follow step by step(each step correspond to a tag):
   ```
   
   
-  * Return '$(PROJECT)\\node_modules\sqlite3', run command 'npm i --build-from--source'. If there is an error 'node.lib is corrupt', just download a new lib from [http://nodejs.org/dist/](http://nodejs.org/dist/) and replace it.
+* Return '$(PROJECT)\\node_modules\sqlite3', run command 'npm i --build-from--source'. If there is an error 'node.lib is corrupt', just download a new lib from [http://nodejs.org/dist/](http://nodejs.org/dist/) and replace it.
   
