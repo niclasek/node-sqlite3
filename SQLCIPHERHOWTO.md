@@ -78,5 +78,5 @@ or follow step by step(each step correspond to a tag):
   ```
   
   
-* Return '$(PROJECT)\\node_modules\sqlite3', run command 'npm i --build-from--source'. If there is an error 'node.lib is corrupt', just download a new lib from [http://nodejs.org/dist/](http://nodejs.org/dist/) and replace it.
+* Return '$(PROJECT)\\node_modules\sqlite3', run command 'npm i --build-from--source'. If there is an error 'node.lib is corrupt', just download a new lib from [http://nodejs.org/dist/](http://nodejs.org/dist/) and replace it, then use VS201X to open '$(PROJECT)\node_modules\sqlite3\build\binding.sln' and rebuild the solution.
   
