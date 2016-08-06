@@ -15,7 +15,8 @@ or follow step by step(each step correspond to a tag):
  
  4. [tag sqlcipher-howto-4] Go to path '..' and compress directory to 'sqlite-autoconf-3090100.tar.gz' 
  
- 5. [tag sqlcipher-howto-5] Modify 'sqlite3.gyp'. We should let gyp know the libraries we need to link and where the libraries are, so we add some config in condition 'OS == "win"':
+ 5. [tag sqlcipher-howto-5] Modify 'sqlite3.gyp'. We should let gyp know the libraries we need to link and where the libraries are, so we add some config in condition 'OS == "win"':  
+  
   before:
   ```
         ['OS == "win"', {
@@ -45,7 +46,8 @@ or follow step by step(each step correspond to a tag):
   ```
   For x64, replace 'OpenSSL-Win32' with 'OpenSSL-Win64'. Fow now, the compiler is able to find libraries.
   
-  6. [tag sqlcipher-howto-6] Add some defines in 'target_name': 'sqlite3'
+  6. [tag sqlcipher-howto-6] Add some defines in 'target_name': 'sqlite3'  
+  
   before:
   ```
         'defines': [
@@ -74,6 +76,7 @@ or follow step by step(each step correspond to a tag):
           'SQLITE_ENABLE_COLUMN_METADATA'
         ],
   ```
+  
   
   7. Return '$(PROJECT)\\node_modules\sqlite3', run command 'npm i --build-from--source'. If there is an error 'node.lib is corrupt', just download a new lib from [http://nodejs.org/dist/](http://nodejs.org/dist/) and replace it.
   
