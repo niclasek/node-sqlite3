@@ -1,4 +1,8 @@
-Asynchronous, non-blocking [SQLite3](http://sqlite.org/) bindings for [Node.js](http://nodejs.org/).
+```
+npm install https://github.com/liubiggun/node-sqlite3
+```
+
+Asynchronous, non-blocking [SQLite3](http://sqlite.org/) with [SQLCipher](http://sqlcipher.net) bindings for [Node.js](http://nodejs.org/) in Windows.
 
 [![NPM](https://nodei.co/npm/sqlite3.png?downloads=true&downloadRank=true)](https://nodei.co/npm/sqlite3/)
 
