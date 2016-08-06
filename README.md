@@ -1,8 +1,10 @@
-```
-npm install https://github.com/liubiggun/node-sqlite3
-```
 
 Asynchronous, non-blocking [SQLite3](http://sqlite.org/) with [SQLCipher](http://sqlcipher.net) bindings for [Node.js](http://nodejs.org/) in Windows.
+
+```
+npm install --save --build-from-source https://github.com/liubiggun/node-sqlite3/tarball/master
+```
+Read [SQLCIPHERHOWTO.md](https://github.com/liubiggun/node-sqlite3/blob/master/SQLCIPHERHOWTO.md)
 
 [![NPM](https://nodei.co/npm/sqlite3.png?downloads=true&downloadRank=true)](https://nodei.co/npm/sqlite3/)
 
