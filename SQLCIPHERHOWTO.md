@@ -1,7 +1,7 @@
 # How to bing sqlcpher
 You can install from github:  
 ```
-npm install https://github.com/liubiggun/node-sqlite3
+npm install --save --build-from-source https://github.com/liubiggun/node-sqlite3/tarball/master
 ```
 or follow step by step(each step correspond to a tag):
 
