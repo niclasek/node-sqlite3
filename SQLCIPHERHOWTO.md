@@ -5,17 +5,17 @@ npm install --save --build-from-source https://github.com/liubiggun/node-sqlite3
 ```
 or follow step by step(each step correspond to a tag):
 
- 0. Run command 'npm install sqlite3' in your project.
+ * Run command 'npm install sqlite3' in your project.
  
- 1. [tag sqlcipher-howto-1] Go to path '.\node_modules\sqlite3\deps', we will modify 'sqlite-autoconf-3090100.tar.gz' and 'sqlite3.gyp'. Now extract 'sqlite-autoconf-3090100.tar.gz' to this directory, rename 'sqlite-autoconf-3090100.tar.gz' to 'sqlite-autoconf-3090100-backup.tar.gz'.Now we have a dirtory 'sqlite-autoconf-3090100' which contains source files of sqlite3.
+ * [tag sqlcipher-howto-1] Go to path '.\node_modules\sqlite3\deps', we will modify 'sqlite-autoconf-3090100.tar.gz' and 'sqlite3.gyp'. Now extract 'sqlite-autoconf-3090100.tar.gz' to this directory, rename 'sqlite-autoconf-3090100.tar.gz' to 'sqlite-autoconf-3090100-backup.tar.gz'.Now we have a dirtory 'sqlite-autoconf-3090100' which contains source files of sqlite3.
  
- 2. [tag sqlcipher-howto-2] Go to sqlite source directory('sqlite-autoconf-3090100'), replace source files of sqlite. For now, we can use [source from this](http://download.csdn.net/detail/herorazor/9001997), but unfortunately we can't find the reference of sqlite source files. After download, replace 'sqlite3.h', 'sqlite3.c', 'sqlite3ext.h' with new.
+ * [tag sqlcipher-howto-2] Go to sqlite source directory('sqlite-autoconf-3090100'), replace source files of sqlite. For now, we can use [source from this](http://download.csdn.net/detail/herorazor/9001997), but unfortunately we can't find the reference of sqlite source files. After download, replace 'sqlite3.h', 'sqlite3.c', 'sqlite3ext.h' with new.
  
- 3. [tag sqlcipher-howto-3] Install openssl for windows because sqlcipher need it. You can [download  from this](http://slproweb.com/products/Win32OpenSSL.html). After install, openssl libraries and directory which contains openssl headers will append to environment variables, however, sometime it maybe not happen. So in this HOWTO, we assume that the compiler can not find the libraries and headers, just like we download two libraries('libeay32.lib', 'ssleay32.lib') and headers, then copy them to the sqlite source directory. Be careful, we should download both x86 libraries and x64 libraries. Now, we add two directories 'OpenSSL-Win32' and 'OpenSSL-Win64' which both contain 'libeay32.lib' and 'ssleay32.lib', and directory 'openssl' which contain headers.
+ * [tag sqlcipher-howto-3] Install openssl for windows because sqlcipher need it. You can [download  from this](http://slproweb.com/products/Win32OpenSSL.html). After install, openssl libraries and directory which contains openssl headers will append to environment variables, however, sometime it maybe not happen. So in this HOWTO, we assume that the compiler can not find the libraries and headers, just like we download two libraries('libeay32.lib', 'ssleay32.lib') and headers, then copy them to the sqlite source directory. Be careful, we should download both x86 libraries and x64 libraries. Now, we add two directories 'OpenSSL-Win32' and 'OpenSSL-Win64' which both contain 'libeay32.lib' and 'ssleay32.lib', and directory 'openssl' which contain headers.
  
- 4. [tag sqlcipher-howto-4] Go to path '..' and compress directory to 'sqlite-autoconf-3090100.tar.gz' 
+ * [tag sqlcipher-howto-4] Go to path '..' and compress directory to 'sqlite-autoconf-3090100.tar.gz' 
  
- 5. [tag sqlcipher-howto-5] Modify 'sqlite3.gyp'. We should let gyp know the libraries we need to link and where the libraries are, so we add some config in condition 'OS == "win"':  
+ * [tag sqlcipher-howto-5] Modify 'sqlite3.gyp'. We should let gyp know the libraries we need to link and where the libraries are, so we add some config in condition 'OS == "win"':  
   
   before:
   ```
@@ -24,7 +24,7 @@ or follow step by step(each step correspond to a tag):
               'WIN32'
             ],
         }]
-  ```
+  ```  
   after:
   ```
         ['OS == "win"', {
@@ -46,7 +46,7 @@ or follow step by step(each step correspond to a tag):
   ```
   For x64, replace 'OpenSSL-Win32' with 'OpenSSL-Win64'. Fow now, the compiler is able to find libraries.
   
-  6. [tag sqlcipher-howto-6] Add some defines in 'target_name': 'sqlite3'  
+  * [tag sqlcipher-howto-6] Add some defines in 'target_name': 'sqlite3'  
   
   before:
   ```
@@ -78,5 +78,5 @@ or follow step by step(each step correspond to a tag):
   ```
   
   
-  7. Return '$(PROJECT)\\node_modules\sqlite3', run command 'npm i --build-from--source'. If there is an error 'node.lib is corrupt', just download a new lib from [http://nodejs.org/dist/](http://nodejs.org/dist/) and replace it.
+  * Return '$(PROJECT)\\node_modules\sqlite3', run command 'npm i --build-from--source'. If there is an error 'node.lib is corrupt', just download a new lib from [http://nodejs.org/dist/](http://nodejs.org/dist/) and replace it.
   
