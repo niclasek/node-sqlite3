@@ -37,7 +37,7 @@
         'defines': [
           'WIN32'
         ],
-        'link_setting': {
+        'link_settings': {
           'libraries': [
             '-llibeay32.lib',
             '-lssleay32.lib',
