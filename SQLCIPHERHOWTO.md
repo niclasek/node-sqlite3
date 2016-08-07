@@ -1,4 +1,4 @@
-# How to bing sqlcpher
+# How to bind sqlcpher
 You can install from github:  
 ```
 npm install --save --build-from-source https://github.com/liubiggun/node-sqlite3/tarball/master
