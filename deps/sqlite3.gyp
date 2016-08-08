@@ -43,7 +43,7 @@
             '-lssleay32.lib',
           ],
           'library_dirs': [
-            '<(SHARED_INTERMEDIATE_DIR)/sqlite-autoconf-<@(sqlite_version)/OpenSSL-Win32'
+            '<(SHARED_INTERMEDIATE_DIR)/sqlite-autoconf-<@(sqlite_version)/OpenSSL-Win64'
           ]
         }
       }]
