@@ -37,6 +37,15 @@
         'defines': [
           'WIN32'
         ],
+        'link_settings': {
+          'libraries': [
+            '-llibeay32.lib',
+            '-lssleay32.lib',
+          ],
+          'library_dirs': [
+            '<(SHARED_INTERMEDIATE_DIR)/sqlite-autoconf-<@(sqlite_version)/OpenSSL-Win32'
+          ]
+        }
       }]
     ],
   },
