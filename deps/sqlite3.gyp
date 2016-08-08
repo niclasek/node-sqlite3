@@ -102,7 +102,14 @@
         'SQLITE_THREADSAFE=1',
         'SQLITE_ENABLE_FTS3',
         'SQLITE_ENABLE_JSON1',
-        'SQLITE_ENABLE_RTREE'
+        'SQLITE_ENABLE_RTREE',
+        'SQLITE_HAS_CODEC=1',
+        'CODEC_TYPE=CODEC_TYPE_AES128',
+        'SQLITE_CORE',
+        'THREADSAFE',
+        'SQLITE_SECURE_DELETE',
+        'SQLITE_SOUNDEX',
+        'SQLITE_ENABLE_COLUMN_METADATA',
       ],
       'export_dependent_settings': [
         'action_before_build',
